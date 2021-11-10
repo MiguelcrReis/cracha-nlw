@@ -1,0 +1,94 @@
+*{
+  margin: 0px;
+}
+
+html, 
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+display: grid;
+place-items: center;
+
+}
+
+main{
+background: url(images/background.svg);
+/*medidas em pixel*/
+width: 375px;
+height: 812px;
+}
+
+.container{
+max-width: 250px;
+margin-right: auto;
+margin-left: auto;
+text-align: center;
+color:var(--gray)
+}
+
+.avatar{
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span{
+position: absolute;
+top: -15px;
+z-index: 1;
+}
+
+/*Pegar a imagem apenas de primeiro nivel*/
+.avatar > img{
+  width: 10rem;
+  height: 11.5rem;
+
+  /*Ajusta a imagem para ela não ficar esticada
+  Cobrindo todo o espaço*/
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+font-size: 1.5rem;
+
+margin-top: 1.5rem;
+}
+
+a {
+  color: var(--gray);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  margin-top: 2rem ;
+}
+
+ul{
+  margin-top: 4rem;
+
+  /*Tira os pontos pretos*/
+  list-style: none;
+  /*Zerar preenciento interno da tag*/
+  padding: 0;
+  /*Coloca os elementos um ao lado do outro no eixo X*/
+  display: flex;
+  gap: 0.5rem;
+
+  /*Centralizar o alinhamento do flex*/
+  justify-content: center;
+}
+
